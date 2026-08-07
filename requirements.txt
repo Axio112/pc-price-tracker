@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+httpx
+beautifulsoup4
+lxml
+pydantic
+pyyaml
+apscheduler
+python-dateutil

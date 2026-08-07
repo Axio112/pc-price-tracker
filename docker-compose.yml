@@ -1,0 +1,19 @@
+services:
+  pc-price-tracker:
+    build: .
+    image: pc-price-tracker:local
+    ports:
+      - "8877:8000"
+    volumes:
+      - price-data:/data
+      # optional: live-edit catalog without rebuild
+      - ./data/products.yaml:/data/products.yaml:ro
+    environment:
+      DATA_DIR: /data
+      DB_PATH: /data/prices.db
+      CATALOG_PATH: /data/products.yaml
+      TZ: Asia/Jerusalem
+    restart: unless-stopped
+
+volumes:
+  price-data:

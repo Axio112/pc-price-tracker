@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pc-price-tracker-data
+  namespace: pc-price-tracker
+  labels:
+    app.kubernetes.io/name: pc-price-tracker
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  # Uncomment and set for your cluster (e.g. managed-csi, gp3, standard)
+  # storageClassName: managed-csi

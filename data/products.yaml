@@ -1,0 +1,108 @@
+# Edit this file to add/remove models you want to track.
+# source: amazon | apple | bestbuy | generic
+# url: product page URL used by the scraper
+
+products:
+  - id: mbp14-m4-pro
+    brand: Apple
+    model: MacBook Pro 14"
+    chip: M4 Pro
+    ram_gb: 24
+    storage_gb: 512
+    display: 14.2" Liquid Retina XDR
+    category: engineering
+    source: apple
+    url: https://www.apple.com/shop/buy-mac/macbook-pro/14-inch
+    currency: USD
+    notes: Common eng default
+
+  - id: mbp16-m4-pro
+    brand: Apple
+    model: MacBook Pro 16"
+    chip: M4 Pro
+    ram_gb: 24
+    storage_gb: 512
+    display: 16.2" Liquid Retina XDR
+    category: engineering
+    source: apple
+    url: https://www.apple.com/shop/buy-mac/macbook-pro/16-inch
+    currency: USD
+    notes: Power / media / large screen
+
+  - id: mba13-m4
+    brand: Apple
+    model: MacBook Air 13"
+    chip: M4
+    ram_gb: 16
+    storage_gb: 512
+    display: 13.6" Liquid Retina
+    category: knowledge-worker
+    source: apple
+    url: https://www.apple.com/shop/buy-mac/macbook-air/13-inch-m4
+    currency: USD
+    notes: Light / PM / general staff
+
+  - id: x1c-gen13
+    brand: Lenovo
+    model: ThinkPad X1 Carbon Gen 13
+    chip: Intel Core Ultra 7
+    ram_gb: 32
+    storage_gb: 1024
+    display: 14" 2.8K OLED
+    category: engineering
+    source: generic
+    url: https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-13-aura-edition-14-inch-intel/21ns0000us
+    currency: USD
+    notes: Premium Windows fleet
+
+  - id: t14-gen6
+    brand: Lenovo
+    model: ThinkPad T14 Gen 6
+    chip: Intel Core Ultra 7
+    ram_gb: 32
+    storage_gb: 512
+    display: 14" WUXGA
+    category: corporate
+    source: generic
+    url: https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadt/thinkpad-t14-gen-6-14-inch-intel/21qg0000us
+    currency: USD
+    notes: Volume corporate Windows
+
+  - id: latitude-5550
+    brand: Dell
+    model: Latitude 5550
+    chip: Intel Core Ultra 7
+    ram_gb: 16
+    storage_gb: 512
+    display: 15.6" FHD
+    category: corporate
+    source: generic
+    url: https://www.dell.com/en-us/shop/dell-laptops/latitude-5550-laptop/spd/latitude-15-5550-laptop
+    currency: USD
+    notes: Common Dell fleet model
+
+  - id: xps14-2025
+    brand: Dell
+    model: XPS 14
+    chip: Intel Core Ultra 7
+    ram_gb: 32
+    storage_gb: 1024
+    display: 14.5" OLED
+    category: engineering
+    source: generic
+    url: https://www.dell.com/en-us/shop/dell-laptops/xps-14-laptop/spd/xps-14-9440-laptop
+    currency: USD
+    notes: Premium Windows alternative
+
+  - id: elitebook-840
+    brand: HP
+    model: EliteBook 840 G11
+    chip: Intel Core Ultra 7
+    ram_gb: 32
+    storage_gb: 512
+    display: 14" WUXGA
+    category: corporate
+    source: generic
+    url: https://www.hp.com/us-en/shop/pdp/hp-elitebook-840-14-inch-g11-notebook-pc
+    currency: USD
+    notes: HP enterprise fleet

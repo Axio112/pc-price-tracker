@@ -1,0 +1,37 @@
+# Optional daily live scrape. Calls the in-cluster Service.
+# Requires the app to be reachable as http://pc-price-tracker.pc-price-tracker.svc
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pc-price-tracker-refresh
+  namespace: pc-price-tracker
+  labels:
+    app.kubernetes.io/name: pc-price-tracker
+spec:
+  # 09:00 Israel time ≈ 06:00 UTC (adjust for DST if needed)
+  schedule: "0 6 * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: curl-refresh
+              image: curlimages/curl:8.12.1
+              args:
+                - -sS
+                - -X
+                - POST
+                - -m
+                - "120"
+                - http://pc-price-tracker.pc-price-tracker.svc.cluster.local/api/refresh
+              resources:
+                requests:
+                  cpu: 10m
+                  memory: 32Mi
+                limits:
+                  cpu: 100m
+                  memory: 64Mi

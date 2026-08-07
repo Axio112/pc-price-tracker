@@ -1,0 +1,15 @@
+.venv
+__pycache__
+*.pyc
+*.pyo
+.git
+.gitignore
+data/prices.db
+data/*.db
+*.md
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.DS_Store
+run.ps1
+k8s/
