@@ -16,7 +16,7 @@ Local app that tracks laptop **models, specs, and prices**, and shows how much t
 ## Quick start
 
 ```powershell
-cd C:\Users\AXIO\Documents\Coding\pc-price-tracker
+cd pc-price-tracker
 .\run.ps1
 ```
 
@@ -54,7 +54,7 @@ For production fleet pricing, vendor quote portals / CDW / reseller APIs are mor
 Build and run locally with Compose (persists SQLite in a volume):
 
 ```powershell
-cd C:\Users\AXIO\Documents\Coding\pc-price-tracker
+cd pc-price-tracker
 docker compose up --build
 ```
 
